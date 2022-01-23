@@ -159,6 +159,7 @@ local function PostSpawnPlayer(ped)
     SetEntityVisible(PlayerPedId(), true)
     Wait(500)
     DoScreenFadeIn(250)
+    TriggerServerEvent('qb-walkstyles:server:walkstyles', 'get') -- CODE FOR QB-WALKINGSTYLES
 end
 
 RegisterNUICallback('spawnplayer', function(data)
